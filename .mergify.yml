@@ -2,20 +2,10 @@ merge_queue:
   max_parallel_checks: 1
 queue_rules:
   - name: default
-    batch_size: 3
-    batch_max_wait_time: 1 min
+    batch_size: 2
+    batch_max_wait_time: 5 min
     queue_conditions: true
     merge_conditions:
       - check-success = vm4-closed-carry-gate
-      - schedule = 01:35-01:50
-    merge_method: merge
-priority_rules:
-  - name: urgent checked-car interrupter
-    conditions:
-      - title = VM4 CHECKED CAR URGENT 20260930
-    priority: high
-    allow_checks_interruption: true
-  - name: normal checked-car batch
-    conditions:
-      - title != VM4 CHECKED CAR URGENT 20260930
-    priority: low
+      - schedule = 03:25-03:40
+    merge_method: merge-batch
