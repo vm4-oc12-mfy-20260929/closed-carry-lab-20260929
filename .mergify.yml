@@ -3,7 +3,6 @@ merge_queue:
   skip_intermediate_results: false
   mode: isolated
 
-
 queue_rules:
   - name: r16-strict
     batch_size: 1
@@ -15,7 +14,6 @@ queue_rules:
       - schedule = 10:00-23:59
     merge_method: merge
 
-
   - name: r16-weak
     batch_size: 1
     batch_max_wait_time: 30 sec
@@ -24,7 +22,6 @@ queue_rules:
     merge_conditions:
       - schedule = 10:00-23:59
     merge_method: merge
-
 
   - name: r17-strict
     batch_size: 1
@@ -36,7 +33,6 @@ queue_rules:
       - schedule = 13:00-23:59
     merge_method: merge
 
-
   - name: r17-high
     batch_size: 1
     batch_max_wait_time: 30 sec
@@ -46,7 +42,6 @@ queue_rules:
       - schedule = 00:00-23:59
     merge_method: merge
 
-
   - name: r17-weak
     batch_size: 1
     batch_max_wait_time: 30 sec
@@ -55,7 +50,6 @@ queue_rules:
     merge_conditions:
       - schedule = 00:00-23:59
     merge_method: merge
-
 
   - name: r23-mode-switch
     batch_size: 1
@@ -67,7 +61,6 @@ queue_rules:
       - schedule = 18:00-23:59
     merge_method: merge
 
-
   - name: r25-weak
     batch_size: 1
     batch_max_wait_time: 30 sec
@@ -76,7 +69,6 @@ queue_rules:
     merge_conditions:
       - schedule = 19:00-23:59
     merge_method: merge
-
 
   - name: r25-strict
     batch_size: 1
@@ -88,7 +80,6 @@ queue_rules:
       - schedule = 19:00-23:59
     merge_method: merge
 
-
   - name: r25-external-weak
     batch_size: 1
     batch_max_wait_time: 30 sec
@@ -97,7 +88,6 @@ queue_rules:
     merge_conditions:
       - schedule = 20:15-23:59
     merge_method: merge
-
 
   - name: r25-external-strict
     batch_size: 1
@@ -109,14 +99,12 @@ queue_rules:
       - schedule = 20:15-23:59
     merge_method: merge
 
-
 priority_rules:
   - name: r17 checked-car interrupter
     conditions:
       - title = VM4 R17 HIGH 20261001
     priority: high
     allow_checks_interruption: true
-
 
   - name: r17 normal lane
     conditions:
