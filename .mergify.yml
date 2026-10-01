@@ -8,4 +8,8 @@ queue_rules:
     merge_conditions:
       - check-success = vm4-closed-carry-gate
       - schedule = 04:20-04:40
+    conflict_resolvers:
+      - paths:
+          - resolver-target.txt
+        strategy: ours
     merge_method: merge-batch
