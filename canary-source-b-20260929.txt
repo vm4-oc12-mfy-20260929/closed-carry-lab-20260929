@@ -1,2 +1,1 @@
-VM4 closed-carry source B canary 2026-09-29; distinct from source A.
-  
+TRUSTED_CONFLICT_261004
