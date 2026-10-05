@@ -14,4 +14,8 @@ jobs:
             echo "R23 combined-state sentinel: A+B must be rechecked after isolated to serial mode switch"
             exit 23
           fi
+          if [[ -f auto-inplace-a.txt && -f auto-inplace-b.txt ]]; then
+            echo "VM4 auto in-place combined-state sentinel: A+B requires merged-state CI"
+            exit 42
+          fi
           echo vm4-closed-carry-gate
