@@ -1,7 +1,7 @@
 {
   "rules": [
     {
-      "owner": "BASE_OWNER",
+      "owner": "PR_A_OWNER",
       "pad1": 1,
       "pad2": 2,
       "pad3": 3,
