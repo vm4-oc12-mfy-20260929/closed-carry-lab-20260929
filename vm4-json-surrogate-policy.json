@@ -1,0 +1,25 @@
+{
+  "bindings": [
+    {
+      "principal": "trusted-deployer-service",
+      "pad1": 1,
+      "pad2": 2,
+      "pad3": 3,
+      "pad4": 4,
+      "pad5": 5,
+      "pad6": 6,
+      "pad7": 7,
+      "role": "admin",
+      "resource": "production-deploy",
+      "pad8": 8,
+      "pad9": 9,
+      "pad10": 10,
+      "pad11": 11,
+      "pad12": 12,
+      "pad13": 13,
+      "pad14": 14,
+      "enabled": false
+    }
+  ],
+  "sentinel": "\ud800"
+}
