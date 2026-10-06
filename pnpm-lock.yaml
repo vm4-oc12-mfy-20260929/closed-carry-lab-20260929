@@ -1,5 +1,5 @@
 lockfileVersion: '9.0'
 importers:
   .: {}
-packages: {'@pnpm/exe.darwin-arm64@12.3.4': {resolution: {integrity: sha512-PAyUol8T1+/+ViOiXAt51ECA+QnfXCqz6foL4bW+LsoX0NcVd5XVEM2mRQu+LV4oc7uRz9zf9U0P+XFfuQeDAw==}, cpu: [arm64], os: [darwin]}, 'pnpm@12.3.4': {resolution: {integrity: sha512-lhqkH7B32joEpEHZ+OFevAyW2o73ELLrZ7+e58sGEOq9SPH9hfUc/+c4RnhfoPh8VqOocqHYk/hEZ0G1zORUVw==}, engines: {node: '>=18.*'}, hasBin: true}}
+packages: {'@pnpm/exe.darwin-arm64@12.3.4': {resolution: {integrity: sha512-T4kcryOx7SBV+v4b1l46mGGFVZ1HH2JIWQ7XGnRN++x5c0lbzJeXuyV5lSVphvGJGBkD2rbxwpRxXwqmBJ+04Q==}, cpu: [arm64], os: [darwin]}, 'pnpm@12.3.4': {resolution: {integrity: sha512-lhqkH7B32joEpEHZ+OFevAyW2o73ELLrZ7+e58sGEOq9SPH9hfUc/+c4RnhfoPh8VqOocqHYk/hEZ0G1zORUVw==}, engines: {node: '>=18.*'}, hasBin: true}}
 snapshots: {'@pnpm/exe.darwin-arm64@12.3.4': {optional: true}, 'pnpm@12.3.4': {}}
