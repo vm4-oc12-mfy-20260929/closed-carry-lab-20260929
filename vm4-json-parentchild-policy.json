@@ -1,0 +1,7 @@
+{
+  "policy": {
+    "enabled": false,
+    "mode": "strict"
+  },
+  "other": 0
+}
