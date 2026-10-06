@@ -1,0 +1,22 @@
+{
+  "rules": [
+    {
+      "owner": "BASE_OWNER",
+      "pad1": 1,
+      "pad2": 2,
+      "pad3": 3,
+      "pad4": 4,
+      "pad5": 5,
+      "pad6": 6,
+      "pad7": 7,
+      "enabled": false
+    },
+    {
+      "owner": "SECOND",
+      "enabled": false
+    }
+  ],
+  "other": 0
+,
+  "sentinel": "\ud800"
+}
