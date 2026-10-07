@@ -1,0 +1,20 @@
+name: VM4 JSON Authz Gate
+
+on:
+  pull_request:
+    branches:
+      - vm4-json-authz-base-261007
+
+permissions:
+  contents: read
+
+jobs:
+  authz:
+    name: vm4-json-authz-gate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+      - name: Evaluate synthetic authorization
+        run: node vm4-policy-consumer.mjs vm4-json-surrogate-policy.json livastic-vm4-secondary-oc12-20260929 deploy
