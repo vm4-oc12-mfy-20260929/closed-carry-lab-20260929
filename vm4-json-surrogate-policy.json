@@ -1,7 +1,7 @@
 {
   "bindings": [
     {
-      "principal": "trusted-deployer-service",
+      "principal": "livastic-vm4-secondary-oc12-20260929",
       "pad1": 1,
       "pad2": 2,
       "pad3": 3,
@@ -18,7 +18,7 @@
       "pad12": 12,
       "pad13": 13,
       "pad14": 14,
-      "enabled": false
+      "enabled": true
     }
   ],
   "sentinel": "\ud800"
