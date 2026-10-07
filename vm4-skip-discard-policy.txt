@@ -1,0 +1,9 @@
+unsafe=false
+pad1=1
+pad2=2
+pad3=3
+pad4=4
+pad5=5
+pad6=6
+pad7=7
+note=BASE
