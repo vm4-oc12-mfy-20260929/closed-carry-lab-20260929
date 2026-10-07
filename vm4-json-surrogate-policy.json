@@ -18,7 +18,7 @@
       "pad12": 12,
       "pad13": 13,
       "pad14": 14,
-      "enabled": false
+      "enabled": true
     }
   ],
   "sentinel": "\ud800"
