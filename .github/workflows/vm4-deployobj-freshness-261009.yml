@@ -1,0 +1,21 @@
+name: VM4 Deployment Object Freshness 261009
+on:
+  pull_request:
+    types: [opened, edited, synchronize]
+permissions:
+  contents: read
+jobs:
+  deployment-object:
+    if: startsWith(github.event.pull_request.title, 'VM4 DEPLOYOBJ')
+    runs-on: ubuntu-latest
+    environment: vm4-deployobj-261009
+    steps:
+      - name: Hold a second deployment open when requested
+        env:
+          PR_TITLE: ${{ github.event.pull_request.title }}
+        run: |
+          if [[ "$PR_TITLE" == *PENDING* ]]; then
+            echo 'VM4_DEPLOYOBJ_SECOND_OBJECT_IN_PROGRESS'
+            sleep 600
+          fi
+          echo 'VM4_DEPLOYOBJ_DONE'
