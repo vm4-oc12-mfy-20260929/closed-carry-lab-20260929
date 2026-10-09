@@ -1,5 +1,1 @@
-{
-  "name": "vm4-parent",
-  "version": "1.0.0",
-  "private": true
-}
+{"name":"vm4-pack-authority","version":"1.0.0","main":"index.js"}
