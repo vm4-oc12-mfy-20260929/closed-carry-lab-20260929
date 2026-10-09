@@ -1,1 +1,1 @@
-{"name":"vm4-devengines-policy","version":"1.0.0","private":true,"devEngines":{"runtime":{"name":"node"}}}
+{"name":"vm4-devengines-policy","version":"1.0.0","private":true,"devEngines":{"runtime":{"name":"node","onFail":"warn"}}}
