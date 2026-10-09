@@ -49,6 +49,9 @@ conflict_resolvers:
   - paths:
       - vm4-skip-discard-policy.txt
     strategy: theirs
+  - package-manager: npm
+    directories:
+      - /vm4-pm-auto-261008
 
 queue_rules:
   - name: vm4-pnpm-integrity-control-261006
@@ -114,4 +117,13 @@ queue_rules:
       - title = VM4 JSON PROTECTED LANDING 261007
     merge_conditions:
       - check-success = vm4-json-authz-gate
+    merge_method: merge-batch
+
+  - name: vm4-package-manager-auto-261008
+    batch_size: 2
+    batch_max_wait_time: 30 min
+    queue_conditions:
+      - title = VM4 PACKAGE MANAGER AUTO 261008
+    merge_conditions:
+      - check-success = vm4-never-package-manager-auto
     merge_method: merge-batch
