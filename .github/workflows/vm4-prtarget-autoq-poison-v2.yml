@@ -110,3 +110,25 @@ jobs:
             exit 32
           fi
           echo "POSITIVE: poisoned identity was rescued while fresh control remained failing"
+
+  autoq-privileged-write-impact:
+    if: ${{ github.event_name == 'pull_request_target' && github.event.pull_request.title == 'VM4_POISON_V2_FLAKY_PRIVWRITE_261011' }}
+    needs: test-insights-poison-v2
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout trusted victim base only
+        uses: actions/checkout@v5
+        with:
+          ref: ${{ github.event.pull_request.base.sha }}
+      - name: Write victim-only canary after false-green
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -C vm4-autoq-impact-261011
+          printf '%s\n' 'VM4_AUTOQ_PRIVWRITE_261011' > vm4-autoq-impact-261011.txt
+          git add vm4-autoq-impact-261011.txt
+          git commit -m 'VM4 AutoQ privileged write impact 261011'
+          git push --force origin HEAD:refs/heads/vm4-autoq-impact-261011
