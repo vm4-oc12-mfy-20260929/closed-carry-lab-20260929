@@ -1,0 +1,2 @@
+VM4 controlled feature-branch separate-SHA check.
+Pure text canary, no CI scripts, tests, secrets, or repository policy modified.
