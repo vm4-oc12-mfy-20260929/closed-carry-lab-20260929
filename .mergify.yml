@@ -1,4 +1,13 @@
 pull_request_rules:
+  - name: vm4-unmerged-mergeable-canary-261015
+    conditions:
+      - author = livastic-vm4-primary-oc12-20260929
+      - title = VM4 UNMERGED CONFIG MERGEABLE CONTROL 261015
+      - base = vm4-labelcopier-base-261008
+    actions:
+      comment:
+        message: "VM4 UNMERGED MERGEABLE CONFIG SHOULD NOT EXECUTE 261015"
+
   - name: vm4-wa-copy-source-head-binding-20261008
     conditions:
       - title = VM4 COPY STALE HEAD 20261008
