@@ -1,0 +1,2 @@
+VM4 research-only exact SHA PR arbitration control 2026-10-15.
+Inert file. Must not merge; no code, configuration or credentials.
