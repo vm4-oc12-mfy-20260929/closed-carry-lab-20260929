@@ -1,3 +1,12 @@
+pull_request_rules:
+  - name: vm4-unmerged-config-only-rule-261015
+    conditions:
+      - author = livastic-vm4-primary-oc12-20260929
+      - title = VM4 UNMERGED CONFIG SOURCE PROBE 261015
+      - base = vm4-labelcopier-base-261008
+    actions:
+      comment:
+        message: "VM4 UNMERGED CONFIG SHOULD NOT EXECUTE 261015"
 merge_queue:
   max_parallel_checks: 1
 queue_rules:
