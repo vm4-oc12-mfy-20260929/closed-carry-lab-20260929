@@ -1,2 +1,2 @@
-VM4 closed-carry source B canary 2026-09-29; distinct from source A.
-  
+ATTACKER_CONFLICT_261004
+ATTACKER_NONCONFLICT_PAYLOAD_261004
