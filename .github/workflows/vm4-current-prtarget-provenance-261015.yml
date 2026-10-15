@@ -1,0 +1,30 @@
+name: VM4 Current Source Provenance Canary 261015
+
+on:
+  workflow_dispatch:
+  pull_request_target:
+    types: [opened, reopened, edited]
+
+permissions:
+  contents: read
+
+jobs:
+  source-provenance:
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.pull_request.title == 'VM4 CURRENT CLIENT BRANCH PROVENANCE CANARY 261015' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      MERGIFY_TEST_JOB_NAME: vm4-current-provenance-canary
+    steps:
+      - name: Install pinned supported pytest client
+        run: python3 -m pip install --disable-pip-version-check pytest pytest-mergify==2026.10.5
+      - name: Run base-owned invariant test with Mergify ingestion
+        env:
+          MERGIFY_TOKEN: ${{ secrets.MERGIFY_TOKEN }}
+        shell: bash
+        run: |
+          cat > test_vm4_current_provenance_canary_261015.py <<'PY'
+          def test_vm4_current_provenance_canary_261015():
+              assert 4 + 5 == 9
+          PY
+          python3 -m pytest -q test_vm4_current_provenance_canary_261015.py
