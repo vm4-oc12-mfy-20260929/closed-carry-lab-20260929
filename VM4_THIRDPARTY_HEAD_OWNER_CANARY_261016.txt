@@ -1,0 +1,1 @@
+Owned VM4 cross-actor head-branch permission test. Harmless text; no scripts, automation or secrets.
